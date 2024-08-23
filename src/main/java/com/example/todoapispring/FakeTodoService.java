@@ -6,7 +6,8 @@ import org.springframework.stereotype.Service;
 @Service("fakeTodoService")
 public class FakeTodoService implements TodoService {
 
-    public String addTodo() {
+    @TimeMonitor
+    public String addTodo() {  // Join Point
         return  "Something";
     }
 

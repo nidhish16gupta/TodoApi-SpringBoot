@@ -41,7 +41,7 @@ public class TodoController {
     }
     @GetMapping("/")
     public ResponseEntity<List<Todo>> getTodos(@RequestParam(required = false, defaultValue = "true") boolean is_completed) {
-        System.out.println("Incoming query params: " + is_completed + " " + this.todoService.addTodo());
+        System.out.println("Incoming query params: " + is_completed + " " + this.todoService2.addTodo());
         return ResponseEntity.ok(todoList);
     }
 
